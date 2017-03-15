@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>RD Frontend Test</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" ng-model="vm.search"
+                   placeholder="Para pesquisar digite 3 ou mais caracteres" ng-change="vm.find()">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+
+        <div class="col-md-3" ng-repeat="book in vm.books">
+          <div class="thumbnail img-responsive">
+            <img alt="{{book.title}}" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg">
+            <div class="caption">
+              <h3>
+                {{book.title}}
+              </h3>
+              <p>
+                {{book.description}}
+              </p>
+              <p>
+                ISBN: {{book.isbn}}
+              </p>
+              <p>
+                <a class="btn btn-primary" href="#" ng-click="vm.favorite(book)">Favorite</a>
+                &nbsp;
+                <a class="btn btn-primary" href="#" ng-click="vm.save(book)">Save</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
