@@ -11,6 +11,7 @@
 .idea/vcs.xml
 
 # Sensitive or high-churn files:
+.idea/*
 .idea/dataSources.ids
 .idea/dataSources.xml
 .idea/dataSources.local.xml
@@ -290,3 +291,4 @@ app/bower_components/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.idea/inspectionProfiles/
