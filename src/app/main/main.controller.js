@@ -13,7 +13,14 @@
     //watch to search books in Google Books service
     $scope.$watch('vm.search', function () {
       if (!!vm.search && vm.search.length >= 3) {
-        vm.books = MainService.query(vm.search);
+        MainService.query(vm.search).then(
+          function success(res) {
+            vm.books = res.data.items;
+          },
+          function error() {
+            vm.books = [];
+          }
+        );
       }
     });
 

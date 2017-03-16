@@ -23,23 +23,23 @@
     <div class="col-md-12">
       <div class="row">
 
-        <div class="col-md-3" ng-repeat="book in vm.books">
+        <div class="col-md-3 bookPanel" ng-repeat="book in vm.books">
           <div class="thumbnail img-responsive">
-            <img alt="{{book.title}}" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg">
+            <a href="{{book.volumeInfo.previewLink}}" target="_blank"><img class="bookImage" alt="{{book.volumeInfo.title}}" src="{{book.volumeInfo.imageLinks.thumbnail || book.volumeInfo.imageLinks.smallThumbnail || book.volumeInfo.imageLinks.small || book.volumeInfo.imageLinks.medium}}"></a>
             <div class="caption">
-              <h3>
-                {{book.title}}
+              <h3 class="bookTitle">
+                {{book.volumeInfo.title}}
               </h3>
               <p>
-                {{book.description}}
+                {{book.volumeInfo.publisher}}&nbsp;{{book.volumeInfo.publishedDate}}
               </p>
               <p>
-                ISBN: {{book.isbn}}
+                <a href="{{book.volumeInfo.previewLink}}" target="_blank">Abra o livro completo aqui</a>
               </p>
               <p>
-                <a class="btn btn-primary" href="#" ng-click="vm.favorite(book)">Favorite</a>
+                <a class="btn btn-primary" href="#" ng-click="vm.favorite(book)" disabled="">Favorite</a>
                 &nbsp;
-                <a class="btn btn-primary" href="#" ng-click="vm.save(book)">Save</a>
+                <a class="btn btn-primary" href="#" ng-click="vm.save(book)" disabled="">Save</a>
               </p>
             </div>
           </div>

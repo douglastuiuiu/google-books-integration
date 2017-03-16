@@ -27,6 +27,21 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
   }
 }
 
+.bookPanel{
+  height: 400px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.bookTitle{
+  max-height: 75px;
+  overflow: hidden;
+}
+
+.bookImage{
+  height: 300px;
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
